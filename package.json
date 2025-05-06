@@ -1,22 +1,38 @@
 {
-  "name": "flowett-common",
+  "name": "@flowett/common",
   "version": "1.0.0",
   "description": "Common types and utilities for Flowett projects",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
     "build": "tsc",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepublishOnly": "npm run build"
   },
+  "files": [
+    "dist/**/*"
+  ],
   "keywords": [
     "flowett",
     "common",
     "types"
   ],
-  "author": "",
-  "license": "ISC",
+  "author": "Flowett Team",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Flowett/flowett-common.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Flowett/flowett-common/issues"
+  },
+  "homepage": "https://github.com/Flowett/flowett-common#readme",
   "devDependencies": {
     "typescript": "^5.0.0"
   },
-  "peerDependencies": {}
+  "peerDependencies": {},
+  "publishConfig": {
+    "access": "public",
+    "scope": "@flowett"
+  }
 }
