@@ -2,12 +2,22 @@
  * Common node types used across Flowett packages
  */
 
+// Enums generate actual JavaScript code
 export enum NodeType {
   TRIGGER = 'trigger',
   ACTION = 'action',
   UTILITY = 'utility'
 }
 
+// Create empty objects for interfaces to ensure they exist at runtime
+// This is needed for ESM compatibility - without these, import statements fail at runtime
+export const INodeInput = {};
+export const INodeOutput = {};
+export const INodeSettings = {};
+export const INodeDefinition = {};
+export const INodeRegistry = {};
+
+// Type definitions using TypeScript interfaces
 export interface INodeInput {
   name: string;
   type: string;

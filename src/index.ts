@@ -3,4 +3,11 @@
  * Exports all common types and utilities
  */
 
-export * from './types';
+export {
+  NodeType,
+  INodeInput,
+  INodeOutput,
+  INodeSettings,
+  INodeDefinition,
+  INodeRegistry
+} from './types/node.types.js';

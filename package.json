@@ -1,9 +1,16 @@
 {
   "name": "@flowett/common",
-  "version": "1.0.0",
+  "version": "1.0.5",
   "description": "Common types and utilities for Flowett projects",
+  "type": "module",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
   "scripts": {
     "build": "tsc",
     "test": "echo \"Error: no test specified\" && exit 1",
